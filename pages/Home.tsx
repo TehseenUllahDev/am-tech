@@ -6,12 +6,12 @@ import { Card3D, FadeInSection } from '../components/ThreeD';
 import { TESTIMONIALS, LEADERSHIP } from '../data';
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1516116216624-53e697fedbea?q=80&w=2128&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=2076&auto=format&fit=crop"
+  "../images/heroImage1.png",
+  "../images/heroImage2.png",
+  "../images/heroImage3.png",
+  "../images/heroImage4.png",
+  "../images/heroImage5.png",
+  "../images/heroImage6.png"
 ];
 const Home = () => {
   const [currentImage, setCurrentImage] = useState(0);

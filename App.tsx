@@ -33,10 +33,10 @@ const Navbar = ({ currentTheme, setTheme }: { currentTheme: string, setTheme: (t
 
   const links = [
     { name: 'Home', path: '/', icon: <Globe size={16} /> },
-    { name: 'About', path: '/about', icon: <User size={16} /> },
     { name: 'Services', path: '/services', icon: <Briefcase size={16} /> },
     { name: 'Team', path: '/employees', icon: <Database size={16} /> },
     { name: 'Contact', path: '/contact', icon: <Phone size={16} /> },
+    { name: 'About', path: '/about', icon: <User size={16} /> },
   ];
 
   const themes = [
@@ -50,7 +50,7 @@ const Navbar = ({ currentTheme, setTheme }: { currentTheme: string, setTheme: (t
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-accent to-accent-secondary flex items-center justify-center text-white font-bold font-display shadow-[0_0_20px_var(--color-accent)] group-hover:rotate-12 transition-transform">
-                AK
+                AM
              </div>
              <span className="font-display font-bold text-xl tracking-wide text-text-main">Tech Hub</span>
           </Link>
