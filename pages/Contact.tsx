@@ -22,8 +22,8 @@ const Contact = () => {
 
           <div className="space-y-6">
             {[
-              { icon: <MapPin size={24} />, title: "Visit Us", desc: "123 Tech Park Avenue, Silicon Valley" },
-              { icon: <Phone size={24} />, title: "Call Us", desc: "+91 98765 43210" },
+              { icon: <MapPin size={24} />, title: "Visit Us", desc: "AM Tech Park Avenue, Kashrote, City Gilgit" },
+              { icon: <Phone size={24} />, title: "Call Us", desc: "+92 98765 43210" },
               { icon: <Mail size={24} />, title: "Email Us", desc: "contact@aktechhub.com" }
             ].map((item, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-3xl flex items-center gap-6 hover:bg-white/10 transition-colors cursor-default">

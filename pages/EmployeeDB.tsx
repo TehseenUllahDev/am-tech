@@ -363,29 +363,29 @@ const EmployeeDB = () => {
           </button>
 
           {/* Filter Dept */}
-          <div className="relative w-full md:w-auto min-w-[180px]">
-             <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" size={16} />
-             <select 
-                value={filterDept} 
-                onChange={(e) => setFilterDept(e.target.value)}
-                className="bg-ui-input border border-ui-border rounded-lg pl-10 pr-8 py-2.5 text-sm text-text-main focus:border-accent focus:ring-1 focus:ring-accent outline-none appearance-none w-full cursor-pointer hover:bg-ui-panel transition-colors"
-             >
-                {uniqueDepartments.map(dept => <option key={dept} value={dept}>{dept}</option>)}
-             </select>
-             <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" size={14} />
-          </div>
+ <div className="relative w-full md:w-auto min-w-[180px]">
+  <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" size={16} />
+  <select 
+    value={filterDept} 
+    onChange={(e) => setFilterDept(e.target.value)}
+    className="bg-[var(--color-ui-input)] border border-ui-border rounded-lg pl-10 pr-8 py-2.5 text-sm text-text-main focus:border-accent focus:ring-1 focus:ring-accent outline-none appearance-none w-full cursor-pointer hover:bg-ui-panel transition-colors"
+  >
+    {uniqueDepartments.map(dept => <option key={dept} value={dept}>{dept}</option>)}
+  </select>
+  <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" size={14} />
+</div>
 
-          {/* Search */}
-          <div className="relative w-full md:w-64">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" size={16} />
-            <input 
-              type="text" 
-              placeholder="Search..." 
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="bg-ui-input border border-ui-border rounded-lg pl-10 pr-4 py-2.5 text-sm text-text-main w-full focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all placeholder-text-muted hover:bg-ui-panel"
-            />
-          </div>
+{/* Search */}
+<div className="relative w-full md:w-64">
+  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" size={16} />
+  <input 
+    type="text" 
+    placeholder="Search..." 
+    value={searchQuery}
+    onChange={(e) => setSearchQuery(e.target.value)}
+    className="bg-[var(--color-ui-input)] border border-ui-border rounded-lg pl-10 pr-4 py-2.5 text-sm text-text-main w-full focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all placeholder-text-muted hover:bg-ui-panel"
+  />
+</div>
 
           {/* View Mode */}
           <div className="flex bg-ui-input rounded-lg p-1 border border-ui-border">

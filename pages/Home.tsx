@@ -96,7 +96,7 @@ const Home = () => {
               style={{ backgroundImage: `url(${HERO_IMAGES[currentImage]})` }}
             />
           </AnimatePresence>
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary bg-opacity-100"></div>
         </div>
         
         {/* Carousel Controls (Subtle) */}
@@ -125,7 +125,7 @@ const Home = () => {
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-text-main to-text-muted drop-shadow-[0_0_15px_var(--shadow-color)]">FUTURE</span> 
             <br/> 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-glow to-accent drop-shadow-[0_0_25px_var(--color-accent)]">IS NOW</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-tr from-accent via-accent-glow to-accent-secondary drop-shadow-[0_0_25px_var(--color-accent)]">IS NOW</span>
           </motion.h1>
           
           <motion.p 
