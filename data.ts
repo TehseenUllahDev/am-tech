@@ -73,7 +73,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
       { id: 'p1', name: 'E-Commerce Platform', role: 'Lead Dev', description: 'Built the core storefront.', status: 'Completed' },
       { id: 'p2', name: 'Dashboard UI', role: 'UX Designer', description: 'Revamped the admin analytics.', status: 'In Progress' }
     ],
-    avatarUrl: getDriveUrl('1_k34V9ZbK08XyvEYzaops3Wm1WE-Ra92')
+    avatarUrl: getDriveUrl('1IktUX0hRAIEoztx72vF1xW2ULYpHjHKR')
   },
   {
     id: 'emp-002',
@@ -89,7 +89,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
     projects: [
       { id: 'p3', name: 'API Gateway', role: 'Architect', description: 'Designed microservices communication.', status: 'Completed' }
     ],
-    avatarUrl: getDriveUrl('1IktUX0hRAIEoztx72vF1xW2ULYpHjHKR')
+    avatarUrl: getDriveUrl('1_k34V9ZbK08XyvEYzaops3Wm1WE-Ra92')
   },
   {
     id: 'emp-003',
@@ -107,8 +107,8 @@ export const MOCK_EMPLOYEES: Employee[] = [
   },
   {
     id: 'emp-004',
-    name: 'David Lee',
-    email: 'david@aktechhub.com',
+    name: 'Lee wills',
+    email: 'lee@aktechhub.com',
     role: 'DevOps Engineer',
     department: 'Operations',
     skills: ['AWS', 'Kubernetes', 'Terraform', 'CI/CD'],
@@ -163,7 +163,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
     gender: 'Female',
     isTopTalent: false,
     projects: [],
-    avatarUrl: getDriveUrl('1GLmqL2B5HG28laVa_o66Qaooj2_c6c_H')
+    avatarUrl: getDriveUrl('1EaHehsgw5yQbfI30pexx1maXTmHJs0yX')
   },
   {
     id: 'emp-008',
@@ -179,7 +179,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
     projects: [
       { id: 'p3', name: 'System Integration Test', role: 'Tester', description: 'Full system test suite.', status: 'Completed' }
     ],
-    avatarUrl: getDriveUrl('1EaHehsgw5yQbfI30pexx1maXTmHJs0yX')
+    avatarUrl: getDriveUrl('1GLmqL2B5HG28laVa_o66Qaooj2_c6c_H')
   },
 ];
 
