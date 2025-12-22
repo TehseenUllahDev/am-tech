@@ -15,7 +15,7 @@ const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [context, setContext] = useState<ChatContext>('general');
   const [messages, setMessages] = useState<Message[]>([
-    { id: '1', text: "Hello! I'm AK-AI. How can I assist you with our tech ecosystem today?", sender: 'bot' }
+    { id: '1', text: "Hello! I'm AM-AI. How can I assist you with our tech ecosystem today?", sender: 'bot' }
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -55,7 +55,7 @@ const ChatBot = () => {
     const lower = text.toLowerCase();
     // if (context === 'bio-gen') {
     //   setContext('general');
-    //   return `Bio Draft:\n\n"${text} is a dedicated professional at AK Tech Hub. Leveraging their expertise, they drive innovation and excellence within their team."`;
+    //   return `Bio Draft:\n\n"${text} is a dedicated professional at AM Tech Hub. Leveraging their expertise, they drive innovation and excellence within their team."`;
     // }
     if (lower.includes('service') || lower.includes('offer')) {
       setContext('services');
@@ -67,7 +67,7 @@ const ChatBot = () => {
     }
     if (lower.includes('about') || lower.includes('history')) {
       setContext('about');
-      return "AK Tech Hub is built on strong values. Ask about History or Values.";
+      return "AM Tech Hub is built on strong values. Ask about History or Values.";
     }
     // if (lower.includes('generate bio')) {
     //   setContext('bio-gen');
@@ -129,7 +129,7 @@ const ChatBot = () => {
                   <Bot size={20} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-text-main text-sm font-display tracking-wide">AK-AI Assistant</h3>
+                  <h3 className="font-bold text-text-main text-sm font-display tracking-wide">AM-AI Assistant</h3>
                   <div className="flex items-center gap-1.5 text-[10px] text-accent font-bold">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span> 
                     Online

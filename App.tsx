@@ -165,7 +165,7 @@ const Footer = () => (
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center gap-2 mb-4 group">
              <div className="w-8 h-8 rounded-lg bg-white text-accent flex items-center justify-center font-bold font-display shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                AK
+                AM
              </div>
              <span className="font-display font-bold text-2xl tracking-wide text-white drop-shadow-[0_0_10px_var(--color-accent)]">TECH HUB</span>
           </Link>
@@ -203,7 +203,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="mt-12 pt-8 border-t border-ui-border text-center text-text-muted text-sm">
-        &copy; {new Date().getFullYear()} AK Tech Hub Pvt. Ltd. | Designed with Fluidity.
+        &copy; {new Date().getFullYear()} AM Tech Hub Pvt. Ltd. | Designed with Fluidity.
       </div>
     </div>
   </footer>

@@ -48,8 +48,8 @@ export const LEADERSHIP: LeadershipProfile[] = [
 ];
 
 export const ABOUT_CONTENT = {
-  whoWeAre: "AK Tech Hub Pvt. Ltd. is a modern learning center and digital solutions company dedicated to providing high-quality IT education, software services, and professional skill development.",
-  history: "Founded on the principles of innovation and excellence, AK Hub aims to equip students with both technical and practical skills that match global industry requirements. We bridge the gap between academic theory and industry reality.",
+  whoWeAre: "AM Tech Hub Pvt. Ltd. is a modern learning center and digital solutions company dedicated to providing high-quality IT education, software services, and professional skill development.",
+  history: "Founded on the principles of innovation and excellence, AM Tech Hub aims to equip students with both technical and practical skills that match global industry requirements. We bridge the gap between academic theory and industry reality.",
   values: [
     { title: "Innovation", desc: "Constantly pushing boundaries and exploring new technologies." },
     { title: "Integrity", desc: "Upholding the highest standards of ethics in everything we do." },
@@ -61,7 +61,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
   {
     id: 'emp-001',
     name: 'Alice Johnson',
-    email: 'alice@aktechhub.com',
+    email: 'alice@amtechhub.com',
     role: 'Senior Frontend Engineer',
     department: 'Engineering',
     skills: ['React', 'TypeScript', 'Tailwind', 'Three.js'],
@@ -78,7 +78,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
   {
     id: 'emp-002',
     name: 'Bob Smith',
-    email: 'bob@aktechhub.com',
+    email: 'bob@amtechhub.com',
     role: 'Backend Architect',
     department: 'Engineering',
     skills: ['Node.js', 'PostgreSQL', 'Redis', 'Docker'],
@@ -94,7 +94,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
   {
     id: 'emp-003',
     name: 'Carol White',
-    email: 'carol@aktechhub.com',
+    email: 'carol@amtechhub.com',
     role: 'Product Manager',
     department: 'Product',
     skills: ['Agile', 'Jira', 'Roadmapping', 'User Research'],
@@ -108,7 +108,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
   {
     id: 'emp-004',
     name: 'Lee wills',
-    email: 'lee@aktechhub.com',
+    email: 'lee@amtechhub.com',
     role: 'DevOps Engineer',
     department: 'Operations',
     skills: ['AWS', 'Kubernetes', 'Terraform', 'CI/CD'],
@@ -124,7 +124,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
   {
     id: 'emp-005',
     name: 'Eva Green',
-    email: 'eva@aktechhub.com',
+    email: 'eva@amtechhub.com',
     role: 'UI/UX Designer',
     department: 'Design',
     skills: ['Figma', 'Adobe XD', 'Prototyping', 'HTML/CSS'],
@@ -140,7 +140,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
   {
     id: 'emp-006',
     name: 'John Wilson',
-    email: 'john.w@aktechhub.com',
+    email: 'john.w@amtechhub.com',
     role: 'Systems Architect',
     department: 'Engineering',
     skills: ['Go', 'Rust', 'Kubernetes'],
@@ -154,7 +154,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
   {
     id: 'emp-007',
     name: 'Sarah Connor',
-    email: 'sarah.c@aktechhub.com',
+    email: 'sarah.c@amtechhub.com',
     role: 'Security Specialist',
     department: 'Engineering',
     skills: ['Pentesting', 'Python', 'Networking'],
@@ -168,7 +168,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
   {
     id: 'emp-008',
     name: 'Matt Smith',
-    email: 'matts@aktechhub.com',
+    email: 'matts@amtechhub.com',
     role: 'QA Engineer',
     department: 'Engineering',
     skills: ['Jest', 'Cypress', 'Selenium', 'Python'],
@@ -184,7 +184,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
-  { id: 't1', name: 'TechCorp Global', role: 'CTO', content: 'AK Tech Hub transformed our digital infrastructure.' },
+  { id: 't1', name: 'TechCorp Global', role: 'CTO', content: 'AM Tech Hub transformed our digital infrastructure.' },
   { id: 't2', name: 'InnovateOne', role: 'Founder', content: 'The skills and dedication of the team are unmatched.' },
   { id: 't3', name: 'EduSystems', role: 'Director', content: 'Bridging the gap between students and tech beautifully.' },
 ];

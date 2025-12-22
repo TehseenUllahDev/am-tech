@@ -738,7 +738,7 @@ const EmployeeDB = () => {
                  </div>
                  <div className="space-y-1">
                    <label className="text-xs font-bold text-text-muted uppercase tracking-wider">Email Address</label>
-                   <input required type="email" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-muted/50" placeholder="john@aktech.com" />
+                   <input required type="email" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-muted/50" placeholder="john@amtech.com" />
                  </div>
                  <div className="space-y-1">
                    <label className="text-xs font-bold text-text-muted uppercase tracking-wider">Role / Title</label>

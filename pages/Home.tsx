@@ -158,7 +158,7 @@ const Home = () => {
             transition={{ delay: 0.5, duration: 1 }}
             className="text-lg md:text-2xl text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed font-medium"
           >
-            AK Tech Hub empowers the next generation by bridging the gap between youth and cutting-edge technology.
+            AM Tech Hub empowers the next generation by bridging the gap between youth and cutting-edge technology.
           </motion.p>
           
           <motion.div 
@@ -431,7 +431,7 @@ const Home = () => {
             <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold mb-8 text-text-main">
-                  Why Choose AK Tech Hub?
+                  Why Choose AM Tech Hub?
                 </h2>
                 <ul className="space-y-6">
                   {[
@@ -457,7 +457,7 @@ const Home = () => {
                     ))}
                   </div>
                   <p className="text-xl italic font-serif text-white mb-4">
-                    "AK Tech Hub transformed our approach to digital transformation. Their team's expertise and dedication are unmatched in the industry."
+                    "AM Tech Hub transformed our approach to digital transformation. Their team's expertise and dedication are unmatched in the industry."
                   </p>
                   <div className="text-right text-white/70">
                     — Tech Innovation Magazine
@@ -515,7 +515,7 @@ const Home = () => {
               </h2>
               
               <p className="text-xl text-text-muted mb-12 max-w-3xl mx-auto leading-relaxed">
-                Join us at AK Tech Hub either as a student, a partner, or a team member. Let's build the digital future together.
+                Join us at AM Tech Hub either as a student, a partner, or a team member. Let's build the digital future together.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">

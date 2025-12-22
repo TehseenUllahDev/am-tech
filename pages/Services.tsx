@@ -127,7 +127,7 @@ const Services = () => {
               <div className="p-8 overflow-y-auto custom-scrollbar bg-primary/20">
                  <div className="mb-8">
                    <h3 className="text-lg font-bold text-text-main mb-3">Overview</h3>
-                   <p className="text-text-muted leading-relaxed text-lg">{selectedService.description} At AK Tech Hub, we ensure this service helps you stay ahead of the curve.</p>
+                   <p className="text-text-muted leading-relaxed text-lg">{selectedService.description} At AM Tech Hub, we ensure this service helps you stay ahead of the curve.</p>
                  </div>
 
                  <div className="mb-8">
