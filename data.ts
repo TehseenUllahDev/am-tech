@@ -9,13 +9,16 @@ export const SERVICES: ServiceItem[] = [
   { id: '6', title: 'IT Consulting', description: 'Strategic technology planning, digital transformation guidance, and IT infrastructure optimization.', icon: 'briefcase' },
 ];
 
+// Helper to convert Drive ID to reliable direct link
+export const getDriveUrl = (id: string) => `https://drive.google.com/thumbnail?id=${id}&sz=w1200`;
+
 export const LEADERSHIP: LeadershipProfile[] = [
   {
     id: 'lead-1',
     name: 'Kashif Akhtar',
     role: 'CEO & Founder',
     bio: 'A visionary leader with over 15 years in software engineering. Driven by a passion to bridge the digital.',
-    imageUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1000&auto=format&fit=crop',
+    imageUrl: getDriveUrl('1-RDIBow1aTLAU3r7Y7e2Y5qMYRad1Lnv'),
     socials: { linkedin: '#', twitter: '#' }
   },
   {
@@ -23,23 +26,23 @@ export const LEADERSHIP: LeadershipProfile[] = [
     name: 'Tehseen Ullah',
     role: 'Co-Founder & CTO',
     bio: 'Former Tech Lead at Silicon Valley giants. Ensures our technical curriculum and solutions are world-class.',
-    imageUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop',
+    imageUrl: getDriveUrl('1X-4GeCxeuolsHOeWqsNB2fojV5CzW7m_'),
     socials: { linkedin: '#', twitter: '#' }
   },
   {
     id: 'lead-3',
     name: 'Ghuffran Ahmed',
     role: 'Consultant',
-    bio: 'Former consultant at Silicon Valley giants. Specializes in strategic planning and business development.',
-    imageUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop',
+    bio: 'Expert in strategic planning and business development with a focus on emerging markets.',
+    imageUrl: getDriveUrl('1DE3b68AT60a4bA6OgLv8Ki-o70wyWS7i'),
     socials: { linkedin: '#', twitter: '#' }
   },
   {
     id: 'lead-4',
     name: 'Ahmad Saleem',
     role: 'Web Developer',
-    bio: 'Former web developer at Silicon Valley giants. Expert in modern web technologies and frameworks.',
-    imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop',
+    bio: 'Full-stack specialist dedicated to building performant and accessible web experiences.',
+    imageUrl: getDriveUrl('1B_4rpecbApEE_-_RWtjWUt39lGefZgnY'),
     socials: { linkedin: '#', twitter: '#' }
   }
 ];
@@ -55,7 +58,6 @@ export const ABOUT_CONTENT = {
 };
 
 export const MOCK_EMPLOYEES: Employee[] = [
- 
   {
     id: 'emp-001',
     name: 'Alice Johnson',
@@ -71,7 +73,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
       { id: 'p1', name: 'E-Commerce Platform', role: 'Lead Dev', description: 'Built the core storefront.', status: 'Completed' },
       { id: 'p2', name: 'Dashboard UI', role: 'UX Designer', description: 'Revamped the admin analytics.', status: 'In Progress' }
     ],
-    avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop'
+    avatarUrl: getDriveUrl('1_k34V9ZbK08XyvEYzaops3Wm1WE-Ra92')
   },
   {
     id: 'emp-002',
@@ -87,7 +89,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
     projects: [
       { id: 'p3', name: 'API Gateway', role: 'Architect', description: 'Designed microservices communication.', status: 'Completed' }
     ],
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop'
+    avatarUrl: getDriveUrl('1IktUX0hRAIEoztx72vF1xW2ULYpHjHKR')
   },
   {
     id: 'emp-003',
@@ -101,7 +103,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
     gender: 'Female',
     isTopTalent: false,
     projects: [],
-    avatarUrl: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop'
+    avatarUrl: getDriveUrl('1n50ZPSD6AeV6J5kVC_WxjatfLF-_yVeZ')
   },
   {
     id: 'emp-004',
@@ -117,7 +119,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
     projects: [
       { id: 'p4', name: 'Migration to Cloud', role: 'Lead', description: 'Moved on-prem legacy to AWS.', status: 'Completed' }
     ],
-    avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop'
+    avatarUrl: getDriveUrl('1HB5G5MXGAd2Nydyl49jTMu_moale9Vzw')
   },
   {
     id: 'emp-005',
@@ -133,56 +135,51 @@ export const MOCK_EMPLOYEES: Employee[] = [
     projects: [
       { id: 'p5', name: 'Mobile App Redesign', role: 'Lead Designer', description: 'Modern look for client app.', status: 'In Progress' }
     ],
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop'
+    avatarUrl: getDriveUrl('1IuuInAE5Tr3SH4FT8H60o6Y2wih_Ti_8')
   },
-   {
+  {
     id: 'emp-006',
-    name: 'Alice Johnson',
-    email: 'alice@aktechhub.com',
-    role: 'Senior Frontend Engineer',
+    name: 'John Wilson',
+    email: 'john.w@aktechhub.com',
+    role: 'Systems Architect',
     department: 'Engineering',
-    skills: ['React', 'TypeScript', 'Tailwind', 'Three.js'],
-    joinDate: '2021-03-15',
+    skills: ['Go', 'Rust', 'Kubernetes'],
+    joinDate: '2019-04-12',
     hasLaptop: true,
-    gender: 'Female',
+    gender: 'Male',
     isTopTalent: true,
-    projects: [
-      { id: 'p1', name: 'E-Commerce Platform', role: 'Lead Dev', description: 'Built the core storefront.', status: 'Completed' },
-      { id: 'p2', name: 'Dashboard UI', role: 'UX Designer', description: 'Revamped the admin analytics.', status: 'In Progress' }
-    ],
-    avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop'
+    projects: [],
+    avatarUrl: getDriveUrl('1Jri8eDhUoELZejAT5uUBegT4mmJNJVfc')
   },
   {
     id: 'emp-007',
-    name: 'Bob Smith',
-    email: 'bob@aktechhub.com',
-    role: 'Backend Architect',
+    name: 'Sarah Connor',
+    email: 'sarah.c@aktechhub.com',
+    role: 'Security Specialist',
     department: 'Engineering',
-    skills: ['Node.js', 'PostgreSQL', 'Redis', 'Docker'],
-    joinDate: '2020-06-01',
+    skills: ['Pentesting', 'Python', 'Networking'],
+    joinDate: '2022-08-20',
     hasLaptop: true,
-    gender: 'Male',
-    isTopTalent: true,
-    projects: [
-      { id: 'p3', name: 'API Gateway', role: 'Architect', description: 'Designed microservices communication.', status: 'Completed' }
-    ],
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop'
+    gender: 'Female',
+    isTopTalent: false,
+    projects: [],
+    avatarUrl: getDriveUrl('1GLmqL2B5HG28laVa_o66Qaooj2_c6c_H')
   },
-    {
+  {
     id: 'emp-008',
     name: 'Matt Smith',
     email: 'matts@aktechhub.com',
-    role: 'Backend Architect',
+    role: 'QA Engineer',
     department: 'Engineering',
-    skills: ['Node.js', 'PostgreSQL', 'Redis', 'Docker'],
+    skills: ['Jest', 'Cypress', 'Selenium', 'Python'],
     joinDate: '2020-06-01',
     hasLaptop: true,
     gender: 'Male',
     isTopTalent: true,
     projects: [
-      { id: 'p3', name: 'API Gateway', role: 'Architect', description: 'Designed microservices communication.', status: 'Completed' }
+      { id: 'p3', name: 'System Integration Test', role: 'Tester', description: 'Full system test suite.', status: 'Completed' }
     ],
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop'
+    avatarUrl: getDriveUrl('1EaHehsgw5yQbfI30pexx1maXTmHJs0yX')
   },
 ];
 

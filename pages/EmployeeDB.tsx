@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Plus, Filter, Grid, List, Laptop, X, Calendar, Briefcase, Trash2, Edit2, ChevronDown, ChevronUp, Upload, Image as ImageIcon, CheckCircle, FolderPlus, Folder, AlertTriangle, BadgeCheck, Shield, Lock, Unlock, Mail, Star, Clock, CheckSquare, Wrench } from 'lucide-react';
+import { Search, Plus, Filter, Grid, List, Laptop, X, Calendar, Briefcase, Trash2, Edit2, ChevronDown, ChevronUp, Upload, Image as ImageIcon, CheckCircle, FolderPlus, Folder, AlertTriangle, BadgeCheck, Shield, Lock, Unlock, Mail, Star, Clock, CheckSquare, Wrench, Eye, EyeOff } from 'lucide-react';
 import { MOCK_EMPLOYEES } from '../data';
 import { Employee, Project } from '../types';
 
@@ -56,6 +56,7 @@ const ConfirmModal = ({ isOpen, title, message, onConfirm, onCancel }: { isOpen:
 
 const LoginModal = ({ isOpen, onClose, onLogin }: { isOpen: boolean; onClose: () => void; onLogin: (status: boolean) => void }) => {
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -93,14 +94,21 @@ const LoginModal = ({ isOpen, onClose, onLogin }: { isOpen: boolean; onClose: ()
              <label className="block text-xs font-bold text-text-muted uppercase tracking-wider mb-2">Password</label>
              <div className="relative">
                <input 
-                 type="password" 
+                 type={showPassword ? "text" : "password"}
                  value={password}
                  onChange={(e) => { setPassword(e.target.value); setError(false); }}
-                 className={`w-full bg-ui-input border ${error ? 'border-red-500' : 'border-ui-border'} rounded-lg pl-10 pr-4 py-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all`}
+                 className={`w-full bg-[var(--color-ui-input)] border ${error ? 'border-red-500' : 'border-ui-border'} rounded-lg pl-10 pr-12 py-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-muted/50`}
                  placeholder="••••••••"
                  autoFocus
                />
                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" size={16} />
+               <button
+                 type="button"
+                 onClick={() => setShowPassword(!showPassword)}
+                 className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted hover:text-text-main transition-colors"
+               >
+                 {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+               </button>
              </div>
              {error && <p className="text-red-400 text-xs mt-2">Incorrect password. Please try again.</p>}
            </div>
@@ -363,29 +371,29 @@ const EmployeeDB = () => {
           </button>
 
           {/* Filter Dept */}
- <div className="relative w-full md:w-auto min-w-[180px]">
-  <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" size={16} />
-  <select 
-    value={filterDept} 
-    onChange={(e) => setFilterDept(e.target.value)}
-    className="bg-[var(--color-ui-input)] border border-ui-border rounded-lg pl-10 pr-8 py-2.5 text-sm text-text-main focus:border-accent focus:ring-1 focus:ring-accent outline-none appearance-none w-full cursor-pointer hover:bg-ui-panel transition-colors"
-  >
-    {uniqueDepartments.map(dept => <option key={dept} value={dept}>{dept}</option>)}
-  </select>
-  <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" size={14} />
-</div>
+          <div className="relative w-full md:w-auto min-w-[180px]">
+            <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" size={16} />
+            <select 
+              value={filterDept} 
+              onChange={(e) => setFilterDept(e.target.value)}
+              className="bg-[var(--color-ui-input)] border border-ui-border rounded-lg pl-10 pr-8 py-2.5 text-sm text-text-main focus:border-accent focus:ring-1 focus:ring-accent outline-none appearance-none w-full cursor-pointer hover:bg-ui-panel transition-colors"
+            >
+              {uniqueDepartments.map(dept => <option key={dept} value={dept}>{dept}</option>)}
+            </select>
+            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-text-muted pointer-events-none" size={14} />
+          </div>
 
-{/* Search */}
-<div className="relative w-full md:w-64">
-  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" size={16} />
-  <input 
-    type="text" 
-    placeholder="Search..." 
-    value={searchQuery}
-    onChange={(e) => setSearchQuery(e.target.value)}
-    className="bg-[var(--color-ui-input)] border border-ui-border rounded-lg pl-10 pr-4 py-2.5 text-sm text-text-main w-full focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all placeholder-text-muted hover:bg-ui-panel"
-  />
-</div>
+          {/* Search */}
+          <div className="relative w-full md:w-64">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted" size={16} />
+            <input 
+              type="text" 
+              placeholder="Search..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="bg-[var(--color-ui-input)] border border-ui-border rounded-lg pl-10 pr-4 py-2.5 text-sm text-text-main w-full focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all placeholder:text-text-muted hover:bg-ui-panel"
+            />
+          </div>
 
           {/* View Mode */}
           <div className="flex bg-ui-input rounded-lg p-1 border border-ui-border">
@@ -679,7 +687,7 @@ const EmployeeDB = () => {
                {/* Avatar Upload Section */}
                <div className="flex flex-col items-center justify-center mb-8">
                  <div 
-                    className={`relative w-32 h-32 rounded-full border-2 border-dashed flex flex-col items-center justify-center cursor-pointer transition-all overflow-hidden group ${dragActive ? 'border-accent bg-accent/10 scale-105' : 'border-text-muted bg-ui-input hover:border-accent hover:bg-ui-panel'}`}
+                    className={`relative w-32 h-32 rounded-full border-2 border-dashed flex flex-col items-center justify-center cursor-pointer transition-all overflow-hidden group ${dragActive ? 'border-accent bg-accent/10 scale-105' : 'border-text-muted bg-[var(--color-ui-input)] hover:border-accent hover:bg-ui-panel'}`}
                     onDragEnter={handleDrag}
                     onDragLeave={handleDrag}
                     onDragOver={handleDrag}
@@ -726,20 +734,20 @@ const EmployeeDB = () => {
                <div className="grid md:grid-cols-2 gap-6">
                  <div className="space-y-1">
                    <label className="text-xs font-bold text-text-muted uppercase tracking-wider">Full Name</label>
-                   <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full bg-ui-input border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="e.g. John Doe" />
+                   <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-muted/50" placeholder="e.g. John Doe" />
                  </div>
                  <div className="space-y-1">
                    <label className="text-xs font-bold text-text-muted uppercase tracking-wider">Email Address</label>
-                   <input required type="email" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="w-full bg-ui-input border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="john@aktech.com" />
+                   <input required type="email" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-muted/50" placeholder="john@aktech.com" />
                  </div>
                  <div className="space-y-1">
                    <label className="text-xs font-bold text-text-muted uppercase tracking-wider">Role / Title</label>
-                   <input required type="text" value={formData.role} onChange={e => setFormData({...formData, role: e.target.value})} className="w-full bg-ui-input border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="e.g. Senior Developer" />
+                   <input required type="text" value={formData.role} onChange={e => setFormData({...formData, role: e.target.value})} className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-muted/50" placeholder="e.g. Senior Developer" />
                  </div>
                  <div className="space-y-1">
                    <label className="text-xs font-bold text-text-muted uppercase tracking-wider">Department</label>
                    <div className="relative">
-                      <input list="depts" required type="text" value={formData.department} onChange={e => setFormData({...formData, department: e.target.value})} className="w-full bg-ui-input border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Select or type..." />
+                      <input list="depts" required type="text" value={formData.department} onChange={e => setFormData({...formData, department: e.target.value})} className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-muted/50" placeholder="Select or type..." />
                       <datalist id="depts">
                         {uniqueDepartments.filter(d => d !== 'All').map(d => <option key={d} value={d} />)}
                       </datalist>
@@ -747,11 +755,11 @@ const EmployeeDB = () => {
                  </div>
                  <div className="space-y-1">
                    <label className="text-xs font-bold text-text-muted uppercase tracking-wider">Join Date</label>
-                   <input required type="date" value={formData.joinDate} onChange={e => setFormData({...formData, joinDate: e.target.value})} className="w-full bg-ui-input border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm" />
+                   <input required type="date" value={formData.joinDate} onChange={e => setFormData({...formData, joinDate: e.target.value})} className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all text-sm placeholder:text-text-muted/50" />
                  </div>
                  <div className="space-y-1">
                    <label className="text-xs font-bold text-text-muted uppercase tracking-wider">Gender</label>
-                   <select value={formData.gender} onChange={e => setFormData({...formData, gender: e.target.value as any})} className="w-full bg-ui-input border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all cursor-pointer">
+                   <select value={formData.gender} onChange={e => setFormData({...formData, gender: e.target.value as any})} className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all cursor-pointer">
                      <option value="Male">Male</option>
                      <option value="Female">Female</option>
                      <option value="Other">Other</option>
@@ -767,12 +775,12 @@ const EmployeeDB = () => {
                       type="text" 
                       value={formData.skills?.join(', ')} 
                       onChange={e => setFormData({...formData, skills: e.target.value.split(',').map(s => s.trim())})} 
-                      className="w-full bg-ui-input border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" 
+                      className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-3 text-text-main outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-text-muted/50" 
                       placeholder="React, Node.js, UI/UX..."
                     />
                   </div>
                   <div className="flex flex-col justify-end">
-                    <label className="flex items-center gap-3 cursor-pointer group p-3 bg-ui-input rounded-lg border border-ui-border hover:border-accent/30 transition-all">
+                    <label className="flex items-center gap-3 cursor-pointer group p-3 bg-[var(--color-ui-input)] rounded-lg border border-ui-border hover:border-accent/30 transition-all">
                       <div className={`w-5 h-5 rounded border flex items-center justify-center transition-all ${formData.hasLaptop ? 'bg-accent border-accent' : 'border-text-muted group-hover:border-accent'}`}>
                           {formData.hasLaptop && <CheckCircle size={12} className="text-white" />}
                       </div>
@@ -797,7 +805,7 @@ const EmployeeDB = () => {
                  {formData.leaveDate && (
                    <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }}>
                      <label className="text-xs font-bold text-text-muted uppercase tracking-wider">Leave Date</label>
-                     <input type="date" value={formData.leaveDate} onChange={e => setFormData({...formData, leaveDate: e.target.value})} className="w-full mt-1 bg-ui-input border border-red-500/30 rounded-lg p-3 text-text-main outline-none focus:border-red-500 transition-all text-sm" />
+                     <input type="date" value={formData.leaveDate} onChange={e => setFormData({...formData, leaveDate: e.target.value})} className="w-full mt-1 bg-[var(--color-ui-input)] border border-red-500/30 rounded-lg p-3 text-text-main outline-none focus:border-red-500 transition-all text-sm placeholder:text-text-muted/50" />
                    </motion.div>
                  )}
                </div>
@@ -807,7 +815,7 @@ const EmployeeDB = () => {
                   <div className="flex justify-between items-center mb-6">
                     <h3 className="text-lg font-bold text-text-main flex items-center gap-2"><FolderPlus size={18} className="text-accent"/> Managed Projects</h3>
                     {!isAddingProject && (
-                      <button type="button" onClick={() => { setNewProject({ name: '', role: '', description: '', status: 'In Progress' }); setIsAddingProject(true); }} className="text-xs bg-ui-input hover:bg-ui-panel px-3 py-1.5 rounded text-accent transition-colors border border-ui-border">
+                      <button type="button" onClick={() => { setNewProject({ name: '', role: '', description: '', status: 'In Progress' }); setIsAddingProject(true); }} className="text-xs bg-[var(--color-ui-input)] hover:bg-ui-panel px-3 py-1.5 rounded text-accent transition-colors border border-ui-border">
                         + Add Project
                       </button>
                     )}
@@ -820,12 +828,12 @@ const EmployeeDB = () => {
                          {editingProjectId ? 'Edit Project' : 'New Project Details'}
                        </h4>
                        <div className="grid grid-cols-2 gap-4 mb-4">
-                          <input type="text" placeholder="Project Name" value={newProject.name} onChange={e => setNewProject({...newProject, name: e.target.value})} className="bg-ui-input border border-ui-border rounded-lg p-2.5 text-sm text-text-main focus:border-accent outline-none" />
-                          <input type="text" placeholder="Role in Project" value={newProject.role} onChange={e => setNewProject({...newProject, role: e.target.value})} className="bg-ui-input border border-ui-border rounded-lg p-2.5 text-sm text-text-main focus:border-accent outline-none" />
+                          <input type="text" placeholder="Project Name" value={newProject.name} onChange={e => setNewProject({...newProject, name: e.target.value})} className="bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-2.5 text-sm text-text-main focus:border-accent outline-none placeholder:text-text-muted/50" />
+                          <input type="text" placeholder="Role in Project" value={newProject.role} onChange={e => setNewProject({...newProject, role: e.target.value})} className="bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-2.5 text-sm text-text-main focus:border-accent outline-none placeholder:text-text-muted/50" />
                        </div>
-                       <textarea placeholder="Description" value={newProject.description} onChange={e => setNewProject({...newProject, description: e.target.value})} className="w-full bg-ui-input border border-ui-border rounded-lg p-2.5 text-sm text-text-main mb-4 focus:border-accent outline-none" rows={2}></textarea>
+                       <textarea placeholder="Description" value={newProject.description} onChange={e => setNewProject({...newProject, description: e.target.value})} className="w-full bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-2.5 text-sm text-text-main mb-4 focus:border-accent outline-none placeholder:text-text-muted/50" rows={2}></textarea>
                        <div className="flex justify-between items-center">
-                          <select value={newProject.status} onChange={e => setNewProject({...newProject, status: e.target.value as any})} className="bg-ui-input border border-ui-border rounded-lg p-2 text-sm text-text-main focus:border-accent outline-none">
+                          <select value={newProject.status} onChange={e => setNewProject({...newProject, status: e.target.value as any})} className="bg-[var(--color-ui-input)] border border-ui-border rounded-lg p-2 text-sm text-text-main focus:border-accent outline-none">
                              <option value="In Progress">In Progress</option>
                              <option value="Completed">Completed</option>
                              <option value="Maintenance">Maintenance</option>
@@ -844,7 +852,7 @@ const EmployeeDB = () => {
                     {formData.projects?.map((proj, idx) => {
                       const statusColor = getStatusColor(proj.status);
                       return (
-                      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} key={proj.id} className="flex justify-between items-center bg-ui-input p-4 rounded-xl border border-ui-border hover:border-ui-border transition-all group">
+                      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} key={proj.id} className="flex justify-between items-center bg-[var(--color-ui-input)] p-4 rounded-xl border border-ui-border hover:border-ui-border transition-all group">
                         <div>
                           <div className="font-bold text-sm text-text-main mb-0.5">{proj.name}</div>
                           <div className="text-xs text-text-muted flex items-center gap-2">

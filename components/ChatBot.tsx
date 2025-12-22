@@ -33,8 +33,7 @@ const ChatBot = () => {
       case 'services': return [...SERVICES.slice(0, 3).map(s => s.title), "View All Services", "Back to Menu"];
       case 'leadership': return ["Who is the CEO?", "Who is the CTO?", "Leadership Vision", "Back to Menu"];
       case 'about': return ["Company History", "Core Values", "Location", "Back to Menu"];
-      case 'bio-gen': return ["Cancel Bio Generation"];
-      default: return ["Services", "Leadership", "About Us", "Generate Bio (Admin)"];
+      default: return ["Services", "Leadership", "About Us"];
     }
   };
 
@@ -44,20 +43,20 @@ const ChatBot = () => {
       setMessages(prev => [...prev, { id: Date.now().toString(), text: "Main menu. What's next?", sender: 'bot' }]);
       return;
     }
-    if (text === "Cancel Bio Generation") {
-      setContext('general');
-      setMessages(prev => [...prev, { id: Date.now().toString(), text: "Bio generation cancelled.", sender: 'bot' }]);
-      return;
-    }
+    // if (text === "Cancel Bio Generation") {
+    //   setContext('general');
+    //   setMessages(prev => [...prev, { id: Date.now().toString(), text: "Bio generation cancelled.", sender: 'bot' }]);
+    //   return;
+    // }
     handleSend(text);
   };
 
   const generateResponse = (text: string): string => {
     const lower = text.toLowerCase();
-    if (context === 'bio-gen') {
-      setContext('general');
-      return `Bio Draft:\n\n"${text} is a dedicated professional at AK Tech Hub. Leveraging their expertise, they drive innovation and excellence within their team."`;
-    }
+    // if (context === 'bio-gen') {
+    //   setContext('general');
+    //   return `Bio Draft:\n\n"${text} is a dedicated professional at AK Tech Hub. Leveraging their expertise, they drive innovation and excellence within their team."`;
+    // }
     if (lower.includes('service') || lower.includes('offer')) {
       setContext('services');
       return `We offer: ${SERVICES.map(s => s.title).join(', ')}.`;
@@ -70,10 +69,10 @@ const ChatBot = () => {
       setContext('about');
       return "AK Tech Hub is built on strong values. Ask about History or Values.";
     }
-    if (lower.includes('generate bio')) {
-      setContext('bio-gen');
-      return "Entering Bio Mode. Type employee details.";
-    }
+    // if (lower.includes('generate bio')) {
+    //   setContext('bio-gen');
+    //   return "Entering Bio Mode. Type employee details.";
+    // }
 
     const foundLeader = LEADERSHIP.find(l => lower.includes(l.name.toLowerCase()));
     if (foundLeader) return `${foundLeader.name}: ${foundLeader.role}. ${foundLeader.bio}`;

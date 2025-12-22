@@ -24,7 +24,7 @@ const Contact = () => {
             {[
               { icon: <MapPin size={24} />, title: "Visit Us", desc: "AM Tech Park Avenue, Kashrote, City Gilgit" },
               { icon: <Phone size={24} />, title: "Call Us", desc: "+92 98765 43210" },
-              { icon: <Mail size={24} />, title: "Email Us", desc: "contact@aktechhub.com" }
+              { icon: <Mail size={24} />, title: "Email Us", desc: "contact@amtechhub.com" }
             ].map((item, idx) => (
               <div key={idx} className="glass-panel p-6 rounded-3xl flex items-center gap-6 hover:bg-white/10 transition-colors cursor-default">
                 <div className="w-14 h-14 bg-accent/20 rounded-2xl flex items-center justify-center text-accent shrink-0">
@@ -56,17 +56,17 @@ const Contact = () => {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-xs font-bold text-text-muted uppercase tracking-wider pl-2">First Name</label>
-                <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-text-main focus:border-accent focus:bg-white/10 outline-none transition-all" placeholder="John" />
+                <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-text-main focus:border-accent focus:bg-white/10 outline-none transition-all" placeholder="Riaz" />
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold text-text-muted uppercase tracking-wider pl-2">Last Name</label>
-                <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-text-main focus:border-accent focus:bg-white/10 outline-none transition-all" placeholder="Doe" />
+                <input type="text" className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-text-main focus:border-accent focus:bg-white/10 outline-none transition-all" placeholder="Ahmad" />
               </div>
             </div>
             
             <div className="space-y-2">
               <label className="text-xs font-bold text-text-muted uppercase tracking-wider pl-2">Email Address</label>
-              <input type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-text-main focus:border-accent focus:bg-white/10 outline-none transition-all" placeholder="john@example.com" />
+              <input type="email" className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-text-main focus:border-accent focus:bg-white/10 outline-none transition-all" placeholder="riazahmad@example.com" />
             </div>
 
             <div className="space-y-2">
