@@ -17,7 +17,7 @@ export const LEADERSHIP: LeadershipProfile[] = [
     id: 'lead-1',
     name: 'Kashif Akhtar',
     role: 'CEO & Founder',
-    bio: 'A visionary leader with over 15 years in software engineering. Driven by a passion to bridge the digital.',
+    bio: 'A visionary leader with 5 years in software engineering. Driven by a passion to bridge the digital dvide.',
     imageUrl: getDriveUrl('1-RDIBow1aTLAU3r7Y7e2Y5qMYRad1Lnv'),
     socials: { linkedin: '#', twitter: '#' }
   },
