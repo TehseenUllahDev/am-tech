@@ -180,10 +180,84 @@ export const MOCK_EMPLOYEES: Employee[] = [
     ],
     avatarUrl: getDriveUrl('1GLmqL2B5HG28laVa_o66Qaooj2_c6c_H')
   },
+    {
+    id: 'emp-009',
+    name: 'Sarah Wright',
+    email: 'sarah.w@amtechhub.com',
+    role: 'Systems Architect',
+    department: 'Engineering',
+    skills: ['Go', 'Rust', 'Kubernetes'],
+    joinDate: '2019-04-12',
+    hasLaptop: true,
+    gender: 'Male',
+    isTopTalent: true,
+    projects: [],
+    avatarUrl: getDriveUrl('1v7hG5htDdqnbagX5x7VAHsRDqDiFtfL1')
+  },
+  {
+    id: 'emp-010',
+    name: 'Billie Eillish',
+    email: 'billie.e@amtechhub.com',
+    role: 'Security Specialist',
+    department: 'Engineering',
+    skills: ['Pentesting', 'Python', 'Networking'],
+    joinDate: '2022-08-20',
+    hasLaptop: true,
+    gender: 'Female',
+    isTopTalent: true,
+    projects: [
+      { id: 'p5', name: 'Mobile App Redesign', role: 'Lead Designer', description: 'Modern look for client app.', status: 'In Progress' }
+    ],
+    avatarUrl: getDriveUrl('1nd7vvDg0Vw1AklRHjqMyyu_c9vgw2YHW')
+  },
+  {
+    id: 'emp-011',
+    name: 'Larra Smith',
+    email: 'larra.s@amtechhub.com',
+    role: 'QA Engineer',
+    department: 'Engineering',
+    skills: ['Jest', 'Cypress', 'Selenium', 'Python'],
+    joinDate: '2020-06-01',
+    hasLaptop: true,
+    gender: 'Male',
+    isTopTalent: true,
+    projects: [
+      { id: 'p3', name: 'System Integration Test', role: 'Tester', description: 'Full system test suite.', status: 'Completed' }
+    ],
+    avatarUrl: getDriveUrl('1khmBLVlDJ1omrAWiLULl3qggKkDUB2wB')
+  },
+   {
+    id: 'emp-010',
+    name: 'Sarah Jhones',
+    email: 'sarah.j@amtechhub.com',
+    role: 'Security Specialist',
+    department: 'Engineering',
+    skills: ['Pentesting', 'Python', 'Networking'],
+    joinDate: '2022-08-20',
+    hasLaptop: true,
+    gender: 'Female',
+    isTopTalent: false,
+    projects: [
+      { id: 'p3', name: 'System Integration Test', role: 'Tester', description: 'Full system test suite.', status: 'Completed' }
+    ],
+    avatarUrl: getDriveUrl('1khmBLVlDJ1omrAWiLULl3qggKkDUB2wB')
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
-  { id: 't1', name: 'TechCorp Global', role: 'CTO', content: 'AM Tech Hub transformed our digital infrastructure.' },
-  { id: 't2', name: 'InnovateOne', role: 'Founder', content: 'The skills and dedication of the team are unmatched.' },
-  { id: 't3', name: 'EduSystems', role: 'Director', content: 'Bridging the gap between students and tech beautifully.' },
+  { id: 't1', 
+    name: 'TechCorp Global', 
+    role: 'CTO', 
+    content: 'AM Tech Hub transformed our digital infrastructure.' 
+  },
+  { id: 't2', 
+    name: 'InnovateOne', 
+    role: 'Founder', 
+    content: 'The skills and dedication of the team are unmatched.' 
+  },
+  { id: 't3', 
+    name: 'EduSystems', 
+    role: 'Director', 
+    content: 'Bridging the gap between students and tech beautifully.' 
+  },
 ];
