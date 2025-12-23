@@ -6,7 +6,7 @@ import { Card3D, FadeInSection } from '../components/ThreeD';
 import { TESTIMONIALS, LEADERSHIP, getDriveUrl, SERVICES } from '../data';
 
 const HERO_IMAGES = [
-  getDriveUrl('1U14pJuKurLCrhp0bmyQcjdo5_I-px-UW'),
+  // getDriveUrl('1U14pJuKurLCrhp0bmyQcjdo5_I-px-UW'),
   getDriveUrl('1I0BNH2nWvsYkuKvvXmEeeRckUdUOtKKt'),
   getDriveUrl('1i2A-SGOIwC8cZXy-nz01kqHudSAretNh'),
   getDriveUrl('12BWRGGhvQO4oeHwxpLgV9pTNVmx45Rl5'),
@@ -371,7 +371,7 @@ const Home = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {SERVICES.slice(0, 6).map((service) => (
+              {SERVICES.slice(0, 3).map((service) => (
                 <motion.div
                   key={service.id}
                   whileHover={{ y: -10 }}

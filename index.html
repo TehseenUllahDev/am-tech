@@ -50,34 +50,31 @@
     </script>
     <style>
       :root {
-        /* Reference: Deep Navy Background + Electric Blue Accents */
-        --color-primary: #020617;       /* Deepest Navy/Black */
-        --color-primary-light: #0f172a; /* Slate 900 */
+        --color-primary: #020617;       
+        --color-primary-light: #0f172a; 
         
-        /* New Electric Blue Accent */
-        --color-accent: #3b82f6;        /* Blue 500 - Vibrant on Dark */
-        --color-accent-secondary: #8b5cf6; /* Violet */
-        --color-accent-tertiary: #06b6d4;  /* Cyan */
+        
+        --color-accent: #3b82f6;        
+        --color-accent-secondary: #8b5cf6; 
+        --color-accent-tertiary: #06b6d4;  
         
         --color-text-main: #ffffff;     
-        --color-text-muted: #cbd5e1;    /* Slate 300 for high contrast */
+        --color-text-muted: #cbd5e1;    
         --color-text-invert: #000000;
         
-        /* Glassmorphism Variables */
+        
         --color-glass: rgba(255, 255, 255, 0.03);
         --color-border: rgba(255, 255, 255, 0.1);
-        --shadow-color: rgba(59, 130, 246, 0.25); /* Blue Shadow */
+        --shadow-color: rgba(59, 130, 246, 0.25); 
         --color-ui-input: rgba(24, 27, 43, 1);
         
       }
 
       .theme-light {
-        /* Light Fluid Alternative */
         --color-primary: #f8fafc;       
         --color-primary-light: #ffffff; 
-        
-        /* Darker Blue for Light Mode readability */
-        --color-accent: #2563eb;        /* Blue 600 */
+
+        --color-accent: #2563eb;        
         --color-accent-secondary: #7c3aed; 
         --color-accent-tertiary: #0891b2;
         
@@ -91,7 +88,6 @@
         --color-ui-input: #e2e8f0;
       }
 
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 6px;
         height: 6px;
@@ -110,7 +106,6 @@
         overflow-x: hidden;
       }
       
-      /* Glass Utility */
       .glass-panel {
         background: var(--color-glass);
         backdrop-filter: blur(20px);
@@ -126,7 +121,6 @@
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
       }
 
-      /* Dynamic Text Gradient */
       .text-gradient {
         background: linear-gradient(to right, var(--color-accent), var(--color-accent-secondary), var(--color-accent-tertiary));
         -webkit-background-clip: text;

@@ -9,7 +9,6 @@ export const SERVICES: ServiceItem[] = [
   { id: '6', title: 'IT Consulting', description: 'Strategic technology planning, digital transformation guidance, and IT infrastructure optimization.', icon: 'briefcase' },
 ];
 
-// Helper to convert Drive ID to reliable direct link
 export const getDriveUrl = (id: string) => `https://drive.google.com/thumbnail?id=${id}&sz=w1200`;
 
 export const LEADERSHIP: LeadershipProfile[] = [
