@@ -24,7 +24,7 @@ export const LEADERSHIP: LeadershipProfile[] = [
     id: 'lead-2',
     name: 'Tehseen Ullah',
     role: 'Co-Founder & CTO',
-    bio: 'Former Tech Lead at Silicon Valley giants. Ensures our technical curriculum and solutions are world-class.',
+    bio: 'Former Tech Lead at AM tech giants. Ensures our technical curriculum and solutions are world-class.',
     imageUrl: getDriveUrl('1X-4GeCxeuolsHOeWqsNB2fojV5CzW7m_'),
     socials: { linkedin: '#', twitter: '#' }
   },

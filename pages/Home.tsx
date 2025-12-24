@@ -6,12 +6,21 @@ import { Card3D, FadeInSection } from '../components/ThreeD';
 import { TESTIMONIALS, LEADERSHIP, getDriveUrl, SERVICES } from '../data';
 
 const HERO_IMAGES = [
-  // getDriveUrl('1U14pJuKurLCrhp0bmyQcjdo5_I-px-UW'),
-  getDriveUrl('1I0BNH2nWvsYkuKvvXmEeeRckUdUOtKKt'),
-  getDriveUrl('1i2A-SGOIwC8cZXy-nz01kqHudSAretNh'),
-  getDriveUrl('12BWRGGhvQO4oeHwxpLgV9pTNVmx45Rl5'),
-  getDriveUrl('1ku2WxgNsUYDNhOelqFWw2qXk4th87_PF'),
-  getDriveUrl('15oy39OOPu1VNXi_Nkq_vUmsmotIpgB9c')
+  getDriveUrl('1x9J1-tLCwTiu7oVapM8VKsXVBhGIYOe0'),
+  // getDriveUrl('13mF3Up90vXpZqHJcc6fu4xyctAVR_jQC'),
+  // getDriveUrl('169zzG_tYi0SIbNqkc7xw6sHJx94U1xIT'),
+  getDriveUrl('1uPU0Y2RckZR_d_xL4uusKNhL1RZO3OnJ'),
+  getDriveUrl('16zkeal2WDonGZOt_lTVFHN1kgOLVSVHb'),
+  getDriveUrl('1Z4w8vH1oXBf_c0z-CKhabdMgU9fgKVXY'),
+  getDriveUrl('1-zt2j-HZMfzMFBUU1GNdGLdhCuPsAocm'),
+  getDriveUrl('1XZOh72vm2UafLBjQ4W831edv9OVIlxEe'),
+  getDriveUrl('1H5OzTMHRx9ISlAOyB7F3-sEWqPfPL5bF'),
+  getDriveUrl('1aM7fjWsLSWweLkuSMsfnWEn-DnSEeWm1'),
+  getDriveUrl('1CVVLwKgZth6ds1kBl4eql4jPvXFG2QLh'),
+  getDriveUrl('1bs1RLp6wEVrrPBPJoeWroRyVNScR9M0L'),
+  getDriveUrl('16ZEuyAr1_ua-effpFXY-EZur-Wkao2Qo'),
+  getDriveUrl('1AQKl-f5NmYLZdzMIa2ojT61sN1ZUj8Mf'),
+  getDriveUrl('1d7c1fvXubUtCNu2XTtJuqcTrxaFwYIHn')
 ];
 
 const Home = () => {
@@ -96,7 +105,7 @@ const Home = () => {
     <div className="flex flex-col gap-24 pb-20">
       
       {/* 1. Hero Section with Carousel */}
-      <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
         {/* Carousel Background */}
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="popLayout">
