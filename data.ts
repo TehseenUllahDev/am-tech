@@ -59,8 +59,8 @@ export const ABOUT_CONTENT = {
 export const MOCK_EMPLOYEES: Employee[] = [
   {
     id: 'emp-001',
-    name: 'Alice Johnson',
-    email: 'alice@amtechhub.com',
+    name: 'Muhammad Hanif',
+    email: 'mhanif@amtechhub.com',
     role: 'Senior Frontend Engineer',
     department: 'Engineering',
     skills: ['React', 'TypeScript', 'Tailwind', 'Three.js'],
@@ -72,12 +72,12 @@ export const MOCK_EMPLOYEES: Employee[] = [
       { id: 'p1', name: 'E-Commerce Platform', role: 'Lead Dev', description: 'Built the core storefront.', status: 'Completed' },
       { id: 'p2', name: 'Dashboard UI', role: 'UX Designer', description: 'Revamped the admin analytics.', status: 'In Progress' }
     ],
-    avatarUrl: getDriveUrl('1IktUX0hRAIEoztx72vF1xW2ULYpHjHKR')
+    // avatarUrl: getDriveUrl('1IktUX0hRAIEoztx72vF1xW2ULYpHjHKR')
   },
   {
     id: 'emp-002',
-    name: 'Bob Smith',
-    email: 'bob@amtechhub.com',
+    name: 'Hussain Ullah',
+    email: 'hussain@amtechhub.com',
     role: 'Backend Architect',
     department: 'Engineering',
     skills: ['Node.js', 'PostgreSQL', 'Redis', 'Docker'],
@@ -88,12 +88,12 @@ export const MOCK_EMPLOYEES: Employee[] = [
     projects: [
       { id: 'p3', name: 'API Gateway', role: 'Architect', description: 'Designed microservices communication.', status: 'Completed' }
     ],
-    avatarUrl: getDriveUrl('1_k34V9ZbK08XyvEYzaops3Wm1WE-Ra92')
+    // avatarUrl: getDriveUrl('1_k34V9ZbK08XyvEYzaops3Wm1WE-Ra92')
   },
   {
     id: 'emp-003',
-    name: 'Carol White',
-    email: 'carol@amtechhub.com',
+    name: 'Ahman Ullah',
+    email: 'ahman@amtechhub.com',
     role: 'Product Manager',
     department: 'Product',
     skills: ['Agile', 'Jira', 'Roadmapping', 'User Research'],
@@ -102,12 +102,12 @@ export const MOCK_EMPLOYEES: Employee[] = [
     gender: 'Female',
     isTopTalent: false,
     projects: [],
-    avatarUrl: getDriveUrl('1n50ZPSD6AeV6J5kVC_WxjatfLF-_yVeZ')
+    // avatarUrl: getDriveUrl('1n50ZPSD6AeV6J5kVC_WxjatfLF-_yVeZ')
   },
   {
     id: 'emp-004',
-    name: 'Lee wills',
-    email: 'lee@amtechhub.com',
+    name: 'Kashif Mehmood',
+    email: 'kashifm@amtechhub.com',
     role: 'DevOps Engineer',
     department: 'Operations',
     skills: ['AWS', 'Kubernetes', 'Terraform', 'CI/CD'],
@@ -118,12 +118,12 @@ export const MOCK_EMPLOYEES: Employee[] = [
     projects: [
       { id: 'p4', name: 'Migration to Cloud', role: 'Lead', description: 'Moved on-prem legacy to AWS.', status: 'Completed' }
     ],
-    avatarUrl: getDriveUrl('1HB5G5MXGAd2Nydyl49jTMu_moale9Vzw')
+    // avatarUrl: getDriveUrl('1HB5G5MXGAd2Nydyl49jTMu_moale9Vzw')
   },
   {
     id: 'emp-005',
-    name: 'Eva Green',
-    email: 'eva@amtechhub.com',
+    name: 'Muhammad Hasnain',
+    email: 'mhasnain@amtechhub.com',
     role: 'UI/UX Designer',
     department: 'Design',
     skills: ['Figma', 'Adobe XD', 'Prototyping', 'HTML/CSS'],
@@ -134,12 +134,12 @@ export const MOCK_EMPLOYEES: Employee[] = [
     projects: [
       { id: 'p5', name: 'Mobile App Redesign', role: 'Lead Designer', description: 'Modern look for client app.', status: 'In Progress' }
     ],
-    avatarUrl: getDriveUrl('1IuuInAE5Tr3SH4FT8H60o6Y2wih_Ti_8')
+    // avatarUrl: getDriveUrl('1IuuInAE5Tr3SH4FT8H60o6Y2wih_Ti_8')
   },
   {
     id: 'emp-006',
-    name: 'John Wilson',
-    email: 'john.w@amtechhub.com',
+    name: 'Atif Shehzad',
+    email: 'atifs@amtechhub.com',
     role: 'Systems Architect',
     department: 'Engineering',
     skills: ['Go', 'Rust', 'Kubernetes'],
@@ -148,12 +148,12 @@ export const MOCK_EMPLOYEES: Employee[] = [
     gender: 'Male',
     isTopTalent: true,
     projects: [],
-    avatarUrl: getDriveUrl('1Jri8eDhUoELZejAT5uUBegT4mmJNJVfc')
+    // avatarUrl: getDriveUrl('1Jri8eDhUoELZejAT5uUBegT4mmJNJVfc')
   },
   {
     id: 'emp-007',
-    name: 'Sarah Connor',
-    email: 'sarah.c@amtechhub.com',
+    name: 'Aftab Hussain',
+    email: 'aftabh@amtechhub.com',
     role: 'Security Specialist',
     department: 'Engineering',
     skills: ['Pentesting', 'Python', 'Networking'],
@@ -162,74 +162,74 @@ export const MOCK_EMPLOYEES: Employee[] = [
     gender: 'Female',
     isTopTalent: false,
     projects: [],
-    avatarUrl: getDriveUrl('1EaHehsgw5yQbfI30pexx1maXTmHJs0yX')
+    // avatarUrl: getDriveUrl('1EaHehsgw5yQbfI30pexx1maXTmHJs0yX')
   },
-  {
-    id: 'emp-008',
-    name: 'Matt Smith',
-    email: 'matts@amtechhub.com',
-    role: 'QA Engineer',
-    department: 'Engineering',
-    skills: ['Jest', 'Cypress', 'Selenium', 'Python'],
-    joinDate: '2020-06-01',
-    hasLaptop: true,
-    gender: 'Male',
-    isTopTalent: true,
-    projects: [
-      { id: 'p3', name: 'System Integration Test', role: 'Tester', description: 'Full system test suite.', status: 'Completed' }
-    ],
-    avatarUrl: getDriveUrl('1GLmqL2B5HG28laVa_o66Qaooj2_c6c_H')
-  },
-    {
-    id: 'emp-009',
-    name: 'Sarah Wright',
-    email: 'sarah.w@amtechhub.com',
-    role: 'Systems Architect',
-    department: 'Engineering',
-    skills: ['Go', 'Rust', 'Kubernetes'],
-    joinDate: '2019-04-12',
-    hasLaptop: true,
-    gender: 'Male',
-    isTopTalent: true,
-    projects: [],
-    avatarUrl: getDriveUrl('1v7hG5htDdqnbagX5x7VAHsRDqDiFtfL1')
-  },
-  {
-    id: 'emp-010',
-    name: 'Billie Eillish',
-    email: 'billie.e@amtechhub.com',
-    role: 'Security Specialist',
-    department: 'Engineering',
-    skills: ['Pentesting', 'Python', 'Networking'],
-    joinDate: '2022-08-20',
-    hasLaptop: true,
-    gender: 'Female',
-    isTopTalent: true,
-    projects: [
-      { id: 'p5', name: 'Mobile App Redesign', role: 'Lead Designer', description: 'Modern look for client app.', status: 'In Progress' }
-    ],
-    avatarUrl: getDriveUrl('1nd7vvDg0Vw1AklRHjqMyyu_c9vgw2YHW')
-  },
-  {
-    id: 'emp-011',
-    name: 'Larra Smith',
-    email: 'larra.s@amtechhub.com',
-    role: 'QA Engineer',
-    department: 'Engineering',
-    skills: ['Jest', 'Cypress', 'Selenium', 'Python'],
-    joinDate: '2020-06-01',
-    hasLaptop: true,
-    gender: 'Male',
-    isTopTalent: true,
-    projects: [
-      { id: 'p3', name: 'System Integration Test', role: 'Tester', description: 'Full system test suite.', status: 'Completed' }
-    ],
-    avatarUrl: getDriveUrl('1khmBLVlDJ1omrAWiLULl3qggKkDUB2wB')
-  },
+  // {
+  //   id: 'emp-008',
+  //   name: 'Matt Smith',
+  //   email: 'matts@amtechhub.com',
+  //   role: 'QA Engineer',
+  //   department: 'Engineering',
+  //   skills: ['Jest', 'Cypress', 'Selenium', 'Python'],
+  //   joinDate: '2020-06-01',
+  //   hasLaptop: true,
+  //   gender: 'Male',
+  //   isTopTalent: true,
+  //   projects: [
+  //     { id: 'p3', name: 'System Integration Test', role: 'Tester', description: 'Full system test suite.', status: 'Completed' }
+  //   ],
+  //   avatarUrl: getDriveUrl('1GLmqL2B5HG28laVa_o66Qaooj2_c6c_H')
+  // },
+  //   {
+  //   id: 'emp-009',
+  //   name: 'Sarah Wright',
+  //   email: 'sarah.w@amtechhub.com',
+  //   role: 'Systems Architect',
+  //   department: 'Engineering',
+  //   skills: ['Go', 'Rust', 'Kubernetes'],
+  //   joinDate: '2019-04-12',
+  //   hasLaptop: true,
+  //   gender: 'Male',
+  //   isTopTalent: true,
+  //   projects: [],
+  //   avatarUrl: getDriveUrl('1v7hG5htDdqnbagX5x7VAHsRDqDiFtfL1')
+  // },
+  // {
+  //   id: 'emp-010',
+  //   name: 'Billie Eillish',
+  //   email: 'billie.e@amtechhub.com',
+  //   role: 'Security Specialist',
+  //   department: 'Engineering',
+  //   skills: ['Pentesting', 'Python', 'Networking'],
+  //   joinDate: '2022-08-20',
+  //   hasLaptop: true,
+  //   gender: 'Female',
+  //   isTopTalent: true,
+  //   projects: [
+  //     { id: 'p5', name: 'Mobile App Redesign', role: 'Lead Designer', description: 'Modern look for client app.', status: 'In Progress' }
+  //   ],
+  //   avatarUrl: getDriveUrl('1nd7vvDg0Vw1AklRHjqMyyu_c9vgw2YHW')
+  // },
+  // {
+  //   id: 'emp-011',
+  //   name: 'Larra Smith',
+  //   email: 'larra.s@amtechhub.com',
+  //   role: 'QA Engineer',
+  //   department: 'Engineering',
+  //   skills: ['Jest', 'Cypress', 'Selenium', 'Python'],
+  //   joinDate: '2020-06-01',
+  //   hasLaptop: true,
+  //   gender: 'Male',
+  //   isTopTalent: true,
+  //   projects: [
+  //     { id: 'p3', name: 'System Integration Test', role: 'Tester', description: 'Full system test suite.', status: 'Completed' }
+  //   ],
+  //   avatarUrl: getDriveUrl('1khmBLVlDJ1omrAWiLULl3qggKkDUB2wB')
+  // },
    {
     id: 'emp-010',
-    name: 'Sarah Jhones',
-    email: 'sarah.j@amtechhub.com',
+    name: 'Izhar ahmad ',
+    email: 'izharh@amtechhub.com',
     role: 'Security Specialist',
     department: 'Engineering',
     skills: ['Pentesting', 'Python', 'Networking'],
@@ -240,7 +240,7 @@ export const MOCK_EMPLOYEES: Employee[] = [
     projects: [
       { id: 'p3', name: 'System Integration Test', role: 'Tester', description: 'Full system test suite.', status: 'Completed' }
     ],
-    avatarUrl: getDriveUrl('1khmBLVlDJ1omrAWiLULl3qggKkDUB2wB')
+    // avatarUrl: getDriveUrl('1khmBLVlDJ1omrAWiLULl3qggKkDUB2wB')
   },
 ];
 
